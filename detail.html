@@ -8,13 +8,21 @@
     <title>Document</title>
 </head>
 <body>
+<!-- Musik Otomatis -->
+<audio id="bgm" autoplay loop>
+    <source src="/musik.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung elemen audio.
+</audio>
+
 <div class="header">
     <img src="/image2/Frame 8(1).png" alt="">
 </div>
-    <div class="teks1">
-        <span>Assalamu'alaikum warohmatullahi wabarokatuh</span>
-        <p>Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan putra dan putri kami</p>
-    </div>
+
+<div class="teks1">
+    <span>Assalamu'alaikum warohmatullahi wabarokatuh</span>
+    <p>Dengan ini kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan putra dan putri kami</p>
+</div>
+
 <div class="container">
     <div class="cewe">
         <img src="/image2/cewe 1.png" alt="">
@@ -29,40 +37,58 @@
         <p>Kp. Cibatur RT 058 RW 018<br>Ds. Mandalahaji, Kec. Pacet</p>
     </div>
 </div>
-    <div class="jadwal">
-        <p>Dengan segala kerendahan hati dan dengan ungkapan syukur atas karunia Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Resepsi Pernikahan putra-putri kami yang akan diselenggarakan pada :</p>
-        <img src="/image2/image 20.png" alt="">
-        <div class="rundown">
-            <h2>Rangkaian Acara</h2>
-            <img src="/image2/Frame 9.png" alt="">
-            <h2>Lokasi</h2>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63313.93762555824!2d107.7046649!3d-7.0399378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c1ee2b56a333%3A0x936f4914854f4b00!2sLapang%20voli%20amga!5e0!3m2!1sid!2sid!4v1686890427350!5m2!1sid!2sid"
-                width="600"
-                height="450"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-                <div class="button-container">
+
+<div class="jadwal">
+    <p>Dengan segala kerendahan hati dan dengan ungkapan syukur atas karunia Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk menghadiri Resepsi Pernikahan putra-putri kami yang akan diselenggarakan pada :</p>
+    <img src="/image2/image 20.png" alt="">
+    <div class="rundown">
+        <h2>Rangkaian Acara</h2>
+        <img src="/image2/Frame 9.png" alt="">
+        <h2>Lokasi</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63313.93762555824!2d107.7046649!3d-7.0399378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68c1ee2b56a333%3A0x936f4914854f4b00!2sLapang%20voli%20amga!5e0!3m2!1sid!2sid!4v1686890427350!5m2!1sid!2sid"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="button-container">
             <a href="https://maps.app.goo.gl/oWcsHbeixTJtrWyT6?g_st=aw" target="_blank">Lihat Lokasi</a>
-                </div>    
-                <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua putra-putri kami</p>  
-                <p>Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>  
-                <div class="galeri">
-    <h2>Galeri</h2>
-        <div class="foto">
-            <img src="/image2/1.png" alt="Foto 1">
-            <img src="/image2/2.png" alt="Foto 2">
-            <img src="/image2/3.png" alt="Foto 3">
-            <img src="/image2/4.png" alt="Foto 4">
-            <img src="/image2/5.png" alt="Foto 5">
-            <img src="/image2/6.png" alt="Foto 6">
         </div>
-</div>
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami, apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu kepada kedua putra-putri kami</p>  
+        <p>Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>  
+        <div class="galeri"></div>
     </div>
 </div>
 
+<div class="foto">
+    <h2>Galeri</h2>
+    <img src="/image2/1.png" alt="Foto 1">
+    <img src="/image2/2.png" alt="Foto 2">
+    <img src="/image2/3.png" alt="Foto 3">
+    <img src="/image2/4.png" alt="Foto 4">
+    <img src="/image2/5.png" alt="Foto 5">
+    <img src="/image2/6.png" alt="Foto 6">
+</div>
+
+<!-- Script untuk autoplay dengan fallback jika diblokir -->
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        const audio = document.getElementById('bgm');
+        const playPromise = audio.play();
+
+        if (playPromise !== undefined) {
+            playPromise.catch(() => {
+                const startAudio = () => {
+                    audio.play();
+                    document.removeEventListener('click', startAudio);
+                };
+                document.addEventListener('click', startAudio);
+            });
+        }
+    });
+</script>
 </body>
 </html>

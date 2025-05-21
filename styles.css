@@ -85,6 +85,7 @@ h1{
     background-image: url(/image2/Rectangle\ 12.png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     padding-bottom: 50px;
 }
 
@@ -130,5 +131,11 @@ iframe{
 .foto img{
     width: 100%;
     height: auto;
-    margin-bottom: -27px;
+    margin-bottom:5px;
+}
+
+.foto h2{
+    margin-top: -50px;
+    color:#5E81A2 ;
+    font-size: 32px;
 }

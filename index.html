@@ -14,8 +14,8 @@
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
-      background-attachment: fixed; /* opsional, efek parallax */
-      overflow-x: hidden;
+      background-attachment: fixed;
+      overflow: hidden;
     }
 
     .container {
@@ -48,11 +48,34 @@
   </style>
 </head>
 <body>
+  <!-- Musik background -->
+  <audio id="bgm" autoplay loop>
+    <source src="/musik.mp3" type="audio/mpeg">
+    Browser Anda tidak mendukung audio.
+  </audio>
+
   <div class="container">
-    <div></div> <!-- Bagian atas kosong atau bisa diisi konten -->
+    <div></div>
     <div class="button-container">
       <a href="detail.html">Detail Acara</a>
     </div>
   </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bgm');
+      const playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          const startAudio = () => {
+            audio.play();
+            document.removeEventListener('click', startAudio);
+          };
+          document.addEventListener('click', startAudio);
+        });
+      }
+    });
+  </script>
 </body>
 </html>
