@@ -102,11 +102,8 @@ iframe {
 }
 
 .wish-card {
-  background-color: #ffffff;
-  border-radius: 12px;
   padding: 14px;
   margin: 12px auto;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   width: 90%;
   max-width: 400px;
   text-align: Left;
@@ -116,18 +113,18 @@ iframe {
 
 .wish-name {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 4px;
 }
 
 .wish-message {
-  font-size: 15px;
+  font-size: 12px;
   margin-bottom: 6px;
   word-wrap: break-word;
 }
 
 .wish-time {
-  font-size: 12px;
+  font-size: 10px;
   color: #888;
 }
 
