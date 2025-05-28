@@ -101,6 +101,37 @@ iframe {
     font-size: 32px;
 }
 
+.wish-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 400px;
+  text-align: Left;
+  font-family: 'Poppins', sans-serif;
+  color: #5E81A2;
+}
+
+.wish-name {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.wish-message {
+  font-size: 15px;
+  margin-bottom: 6px;
+  word-wrap: break-word;
+}
+
+.wish-time {
+  font-size: 12px;
+  color: #888;
+}
+
+
 .wish-section {
     background: #ffffffdd;
     color: #5E81A2;
