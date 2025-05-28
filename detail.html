@@ -156,10 +156,16 @@
       const entries = Object.values(wishes).sort((a, b) => b.timestamp - a.timestamp);
       entries.forEach(entry => {
         const timeAgo = getTimeAgo(entry.timestamp);
-        const div = document.createElement("div");
-        div.innerHTML = `<strong>${entry.name}</strong>: ${entry.wish}<br><small>${timeAgo}</small><hr>`;
-        wishList.appendChild(div);
+        const card = document.createElement("div");
+        card.className = "wish-card";
+        card.innerHTML = `
+          <div class="wish-name">${entry.name}</div>
+          <div class="wish-message">${entry.wish}</div>
+          <div class="wish-time">${timeAgo}</div>
+        `;
+        wishList.appendChild(card);
       });
+
     }
   });
 
