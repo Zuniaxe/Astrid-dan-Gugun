@@ -4,7 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     color: white;
-    background-image: url('/public/image 24.png');
+    background-image: url('image 24.png');
 }
 .header {
     background-color: #5E81A2;
@@ -54,7 +54,7 @@ h1 {
     margin-top: 30px;
 }
 .rundown {
-    background-image: url('/public/Rectangle 12.png');
+    background-image: url('Rectangle 12.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
